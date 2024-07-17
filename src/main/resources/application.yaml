@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: handlerMethodTest
+
+
+token:
+  secret: "testToken123frwffwer23134412231gegeraGERWER23132"
