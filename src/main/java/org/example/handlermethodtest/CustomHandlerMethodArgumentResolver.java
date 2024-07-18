@@ -27,7 +27,8 @@ public class CustomHandlerMethodArgumentResolver implements HandlerMethodArgumen
 
 	@Override
 	public boolean supportsParameter(MethodParameter parameter) {
-		return parameter.getParameterType().equals(UserDto.class);
+		return parameter.getParameterAnnotation(CustomResolver.class) != null
+			&& parameter.getParameterType().equals(UserDto.class);
 	}
 
 	@Override
